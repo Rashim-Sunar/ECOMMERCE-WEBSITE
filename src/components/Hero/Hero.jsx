@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 // import { MdDescription } from 'react-icons/md'
 
-function Hero() {
+function Hero({handleOrderPopup}) {
   const imageList = [
     {
       id: 1,
@@ -61,7 +61,7 @@ function Hero() {
       <div className="container pb-8 sm:pb-0">
         <Slider {...settings}>
           {imageList.map((item) => (
-            <div>
+            <div className="overflow-hidden">
               <div className="grid grid-cols-1 sm:grid-cols-2">
                 {/* text content section  */}
                 <div
@@ -87,7 +87,7 @@ function Hero() {
                     data-aos-duration="500"
                     data-aos-delay="300"
                   >
-                    <button
+                    <button onClick={handleOrderPopup}
                       className="bg-gradient-to-r from-primary to-secondary 
                       hover:scale-105 duration-200 text-white py-2 px-2 rounded-full
                       hover:drop-shadow-lg mt-4 cursor-pointer"

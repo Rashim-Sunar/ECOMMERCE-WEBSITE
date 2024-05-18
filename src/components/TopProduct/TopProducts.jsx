@@ -4,7 +4,7 @@ import Img2 from '../../assets/shirts/shirt2.png'
 import Img3 from '../../assets/shirts/shirt3.png'
 import { FaStar } from "react-icons/fa";
 
-function TopProducts() {
+function TopProducts({handleOrderPopup}) {
     const topProductData = [
         {
             id: 1, 
@@ -25,10 +25,6 @@ function TopProducts() {
             description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo, dolor.Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, illum."
         }
     ];
-
-    const handleOrderPopup = () =>{
-        alert("Item unavailable");
-    }
 
   return (
     <div>

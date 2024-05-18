@@ -4,7 +4,7 @@ import Logo from "../assets/images/logo.png";
 import { IoMdSearch, IoMdArrowDropdown } from "react-icons/io";
 import { FaCartShopping } from "react-icons/fa6";
 
-const Navbar = () => {
+const Navbar = ({handleOrderPopup}) => {
   const Menu = [
     { id: 1, name: "Home", link: "/#" },
     { id: 2, name: "Top Rated", link: "/#Services" },
@@ -54,7 +54,7 @@ const Navbar = () => {
             {/* order button  */}
             <button
               onClick={() => {
-                alert("Ordering not available yet!");
+                handleOrderPopup();
               }}
               className="bg-gradient-to-r from-primary to-secondary transition-all
             duration-200 text-whitegap-3 py-1 px-4 flex items-center rounded-full group"
@@ -75,7 +75,7 @@ const Navbar = () => {
       </div>
 
       {/* Lower Navbar  */}
-      <div className="flex justify-center">
+      <div data-aos="zoom-in" className="flex justify-center">
         <ul className="sm:flex hidden items-cetner gap-4">
           {Menu.map((item) => (
             <li key={item.id}>
